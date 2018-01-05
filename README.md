@@ -3,10 +3,12 @@ Solution to Modified N-Queens using BFS, DFS and Simulated Annealing Algorithms
 
 Short Description: A Zookeeper AI Agent in Python 2.7, to place baby lizards (analogous to Queens in N-Queens Problem) in a nursery safely.
 
+
 Challenges
 ----------
 A lizard placed in a spot on the grid can kill other lizards in the same row, same column and on the diagonals.
 Additionally, the nursery can have some trees planted in it (locations are part of input). These trees act as barricades and prevent lizards from shooting their tongues across them. Essentially, a tree will block any lizard from eating another lizard if it is in the path.
+
 
 Input
 -----
@@ -31,6 +33,7 @@ DFS
 00000000
 00000000
 
+
 Output
 ------
 Solution is written to "output.txt" in the current directory. The format is as follows:
@@ -49,6 +52,13 @@ OK
 00100200
 00000010
 00010000
+
+
+How to Run?
+----------
+Needs Python 2.7 interpreter
+> python zookeeperAgent.py
+
 
 Note
 ----
