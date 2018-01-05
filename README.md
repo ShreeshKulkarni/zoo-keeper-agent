@@ -18,37 +18,14 @@ Third line: 	Strictly positive 32-bit integer p, the number of baby lizards to b
 Next n lines: The n x n nursery, one file line per nursery row
 The nursery has a 0 where there is nothing, and a 2 where there is a tree.
 
-Example Input:
-DFS
-8
-8
-00000000
-00000000
-00000000
-00002000
-00000000
-00000200
-00000000
-00000000
+An example "input.txt" and the corresponding "output.txt" are uploaded in the repository.
 
 Output
 ------
 Solution is written to "output.txt" in the current directory. The format is as follows:
 
 First line: 	OK or FAIL, indicating whether a solution was found or not.
-Next n lines: (If a solution was found) The n x n nursery, one line in the file per nursery row, including the baby lizards
-							and trees. It will have a 0 where there is nothing, a 1 where the program placed a baby lizard, and a 2 where there is a 								tree.
-							
-Example output for the above input:
-OK
-00000100
-10000000
-00001000
-01002001
-00000000
-00100200
-00000010
-00010000
+Next n lines: (If a solution was found) The n x n nursery, one line in the file per nursery row, including the baby lizards and trees. 			It will have a 0 where there is nothing, a 1 where the program placed a baby lizard, and a 2 where there is a 				tree.
 
 Note
 ----
