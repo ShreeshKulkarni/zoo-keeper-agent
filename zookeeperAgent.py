@@ -157,6 +157,7 @@ def sa(matrix):
 
 def countConflicts(matrix, row, col):
     '''Return number of lizard conflicts given a cell.'''
+	
     count = 0
     # row left side
     for j in range(col - 1, -1, -1):
@@ -365,6 +366,7 @@ def BFStreeConfigs(conf):
 
 def bfs():
     '''Run BFS.'''
+	
     global stack
     while True:
         if (time()-start) > 300:
@@ -493,7 +495,9 @@ if __name__ == '__main__':
                 if x == 2:
                     treeFound += 1
             matrix.append(lst)
-
+	
+	print "Running ", alg, "..."
+	
     # write default output
     with open("output.txt", 'w') as f:
         f.write("FAIL\n")
