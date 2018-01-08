@@ -157,6 +157,7 @@ def sa(matrix):
 
 def countConflicts(matrix, row, col):
     '''Return number of lizard conflicts given a cell.'''
+	
     count = 0
     # row left side
     for j in range(col - 1, -1, -1):
@@ -365,6 +366,7 @@ def BFStreeConfigs(conf):
 
 def bfs():
     '''Run BFS.'''
+	
     global stack
     while True:
         if (time()-start) > 300:
@@ -494,6 +496,8 @@ if __name__ == '__main__':
                     treeFound += 1
             matrix.append(lst)
 
+    print "Running ", alg, "..."
+
     # write default output
     with open("output.txt", 'w') as f:
         f.write("FAIL\n")
@@ -507,14 +511,17 @@ if __name__ == '__main__':
                 f.write("\n")
             sys.exit()
 
-    # if p > n*n:
-    #     sys.exit()
-    #
-    # if not treeFound and p > n:
-    #     sys.exit()
-    #
-    # if treeFound and p > (n*n)-treeFound:
-    #     sys.exit()
+    # Failure when trying to place more than n*n lizards on an nxn board
+    if p > n*n:
+        sys.exit()
+
+    # In simple N-Queens case (without trees), a maximum of n lizards can be placed
+    if not treeFound and p > n:
+        sys.exit()
+
+    # Failure when lizards to be placed are more than number of empty cells
+    if treeFound and p > (n*n)-treeFound:
+        sys.exit()
 
     if alg == "DFS":
         root = config(matrix, -1, 0)
